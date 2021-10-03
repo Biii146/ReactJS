@@ -1,0 +1,67 @@
+I/ Giới thiệu
+1. Vào mục src tạo folder Components
+    - tạo file nhỏ FunctionComponent.js
+    - tạo file nhỏ ClassComponent.js
+2. Trong FunctionComponent.js gõ tắt cú pháp rfc
+Trong ClassComponent.js gõ tắt cú pháp rcc
+3. Trong App.js gõ "<" và tên component ở đây là FunctionComponent + "/>" để nó import dc file FunctionComponent lên app.js 
+Trong App.js gõ "<" và tên component ở đây là ClassComponent + "/>" để nó import dc file ClassComponent lên app.js 
+
+II/ BÀI TẬP
+1. Tạo folder bài tâjp trong rsc
+2. Tạo file HomeComponent.js
+    - rcc
+    - trong return tạo các thẻ div giống các thẻ html trc đây để tạo sườn UI
+    - tạo các file HeaderComponent,FooterComponent,..
+    - import các file HeaderComponent,FooterComponent,.. vào HomeComponent bằng cách gõ <HeaderComponent/>
+    Lưu ý: class thay bằng className 
+3. Thêm <HomeComponent/> vào App.js
+4. Trong các file mới như HeaderComponent,..
+    - rcc
+    - tạo thẻ div như bên html
+    - đặt tên cho class để chút qua css gọi class tạo hiệu ứng
+5. Vào file index.css & App.css để xoá hết code cũ
+6. Trong App.css gọi các class ra và thêm hiệu ứng 
+Lưu ý: Muốn lấy mẫu từ boostrap thì phải chuyển về JSX 
+
+III/ DATA BIDING -  truyền giá trị của biến lên giao diện
+1. Tạo folder& file databiding
+2. Vào App.js gọi file <DataBiding/>
+3. Trong file databiding.js: rcc
+    3.1 Phương thức
+            age = 20
+            img = "url"
+        3.1.1 Render phương thức
+        B1: rednerProduct=()=>{
+            B2: let product = {
+                viết các thuộc tính
+            }
+            B3: return để trả kq về
+            - ở đây là nguyên card boostrap mới cóp về
+            - ở những ô có hiện thông tin thì mình truyền dữ liệu từ trên mới tạo về bằng cách {product.moTa}
+        }
+
+
+    3.2 Thuộc tính
+        render()
+        tạo biến let name=""
+        trong return, tạo thẻ div cha và gọi lại biến name vừa tạo:
+        <p> tên: {name} </p> --> cách gọi biến thông thường 
+        <p> tuổi: {this.age} </p> --> cách gọi thuộc tính
+        
+        B4: Gọi hàm rednerProduct cho hiện nguyên phương thức trên UI
+        {this.rednerProduct()} 
+
+IV/ Style Component
+Tạo folder & file StyleComponent. Import vào file App.js
+Lưu ý: tạo CSS ở bất kì file nào trong dự án React thì nó cũng là biến toàn cục, nghĩa là sẽ ăn tất cả code --> cẩn thận bị đè code
+
+Các cách thêm CSS cho React
+- External: tạo các file css bên ngoài rồi import vào file chính StyleComponent.js
+- Internal: 
+    C1: thêm style{{}} ngay trong thẻ muốn thêm tại file chính StyleComponent.js
+    C2: tạo biến kiểu đối tượng
+- Module: 
+        
+
+
