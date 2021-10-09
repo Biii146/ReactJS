@@ -63,5 +63,67 @@ Các cách thêm CSS cho React
     C2: tạo biến kiểu đối tượng
 - Module: 
         
+V/ EVENT HANDLER - XỬ LÝ SỰ KIỆN
+1. Tạo folder & file EventHandle.js
+2. Cách gắn sự kiện click ở bên react ko cần DOM tới thẻ nữa 
+   - Gắn hàm ko truyền tham số: onClick={this.testHandleEvent}
+   - Gắn hàm truyền tham số: onClick={() => {
+                    this.showInfo(fullName);
+                }}
 
+VI/ STATE
+1. Đặt vấn đề
+Phương thức render() - hàm mặc định của react chỉ chạy 1 lần -> ko xử lí những nghiệp vụ để browser tự load lại giao diện 
+=> STATE: 
+    - Thuộc tính có sẵn của react class component
+    - Là hàm bất đồng bộ
+    - Công dụng: setState
+       + gán lại giá trị cho thuộc tính
+       + chạy lại phương thức render
+=> Để dùng đc hàm setState thì mình phải gán cho biến muốn đổi giá trị thành thuộc tính của State
 
+2. Cú pháp:
+B1: tạo biến state ban đầu
+    state = {
+        isLogin:false
+    }
+B2: tạo biến state mới (nếu chỉ có 1 biến mới thì khai báo ở dưới hàm luôn như bt đổi màu xe)
+    let newState = {
+        isLogin:true
+    }
+B3: viết hàm setState
+    C1: theo gợi ý của react
+        this.setState(newState,() => {
+            console.log(this.state.isLogin);
+        });
+    C2: dùng cơ chế async, await
+
+VII/ BÀI TẬP ĐỔI MÀU CHO XE
+1. Xây dựng sườn UI cơ bản
+2. SetState để UI load lại trang nhằm đổi màu 
+   2.1 tạo biến state ban đầu
+    state = {
+        imgCar:"./img/CarBasic/products/black-car.jpg"
+    }
+   2.2 viết hàm renderImg
+   renderImg = (color) => {
+        this.setState({
+            imgCar:`./img/CarBasic/products/${color}-car.jpg`
+        }) 
+    } 
+3. Gắn onClick vào nút button để đổi màu
+Ở đây dùng hàm truyền tham số đổi màu để đổi màu xe vì tên ảnh chỉ khác mỗi chữ màu
+
+VIII/ Render with array
+
+XI/ PROPS
+X/ BÀI TẬP XEM CHI TIẾT
+1. Tạo sườn UI để chia component
+2. Tạo mảng chứa dữ liệu json lấy từ back-end
+3. Viết hàm renderPhoneList() để duyệt mảng, tạo UI động bằng react
+    - duyệt mảng bằng vòng lặp map
+    - 
+    - gọi hàm ở chỗ mình cần tạo UI
+XI/ 
+1. Tạo UI tĩnh -> chia component
+2. Xác định state 
